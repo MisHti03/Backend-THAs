@@ -1,0 +1,62 @@
+> sudo apt-get update
+> sudo apt-get upgrade
+> sudo apt-get install redis-server
+> sudo service redis-server restart
+> redis-cli
+
+SET key value-
+GET key
+ttl key
+KEYS *
+DEL key
+FLUSHALL
+EXISTS key
+expire key time
+setex key time value
+	
+
+
+For Arrays-
+
+LPUSH array value
+RPUSH array value
+LRANGE array start stop
+LPOP array
+RPOP array
+
+
+For Sets-
+
+SADD myset value
+SMEMBERS myset
+
+
+For Object/Hash-
+
+HSET key field value 
+HGET key field
+HGETALL key
+HDEL key field
+HEXISTS key field
+
+Day3:
+
+PSUBSCRIBE pattern [pattern ...]             
+PUBSUB subcommand [argument [argument ...]]  
+PUBLISH channel message                      
+PUNSUBSCRIBE [pattern [pattern ...]]         
+SUBSCRIBE channel [channel ...]              
+UNSUBSCRIBE [channel [channel ...]]
+
+
+XADD mystream 10000 name	
+XADD mystream 10000 name Anna	
+XADD mystream MAXLEN 100000 * name devs	
+XREAD COUNT 200 STREAMS mystream 0	
+XREAD BLOCK 10000 STREAMS mystream 0	
+XREAD BLOCK 10000 STREAMS mystream $
+XRANGE mystream 0 -1
+XRANGE mystream 1000-0 1020-0 COUNT 5	
+XRANNGE mystream - + COUNT 2	I
+XREVRANGE mystream + - COUNT 2
+
