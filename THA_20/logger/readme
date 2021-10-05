@@ -1,0 +1,11 @@
+{
+    error:o,
+    warn:1,
+    info:2,
+    http:3,
+    verbose:4,
+    debug:5,
+    silly:6
+}
+6 debug levels in winston, [debug level increases, priority decreases]
+error has highest priority 
